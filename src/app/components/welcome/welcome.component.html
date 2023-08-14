@@ -1,0 +1,30 @@
+<div class="center" style="margin-top: 30px;">
+    <h1 id="title">Trivial Pursuit</h1>
+    <form [formGroup]="welcomeForm" (ngSubmit)="onFormSubmit()">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput type="text" formControlName="name" >
+        </mat-form-field>
+         <mat-form-field>
+            <mat-label>Difficulty</mat-label>
+            <mat-select formControlName="difficulty">
+              <mat-option value="easy">Easy</mat-option>
+              <mat-option value="medium">Medium</mat-option>
+              <mat-option value="hard">Hard</mat-option>
+            </mat-select>
+        </mat-form-field>
+       
+         <mat-form-field>
+            <mat-label>Favorite category</mat-label>
+            <mat-select formControlName="category">
+              <mat-option *ngFor="let category of categories;" [value]="category.id">{{category.name}}</mat-option>
+            </mat-select>
+        </mat-form-field> 
+        
+        <button mat-raised-button color="primary" type="submit" 
+                style="margin-top:20px;"
+                [disabled]="!welcomeForm.valid">Start</button>
+    </form>
+</div>
+
+

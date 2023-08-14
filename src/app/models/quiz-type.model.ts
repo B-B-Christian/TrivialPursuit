@@ -1,0 +1,1 @@
+export type QuizType = "boolean" | "multiple"

@@ -1,0 +1,14 @@
+#title
+{
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }

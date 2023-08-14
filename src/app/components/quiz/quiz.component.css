@@ -1,0 +1,15 @@
+#questionText
+{
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+
+
+.answerButton
+{
+    text-align: center;
+    width: 70%;
+    padding: 20px;
+}

@@ -1,0 +1,11 @@
+<h4>Question {{currentQuestionIndex + 1}} of {{numOfQuestions}} for our challenger {{playerName}}, in the {{categoryName}} category at the {{difficulty}} difficulty level.</h4>
+    <div *ngIf="currentQuestion != null">
+        <h2 id="questionText">{{currentQuestion.question }}</h2>
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile *ngFor="let answer of currentQuestion.answers, let answerIndex = index" >
+                <button class="answerButton" mat-raised-button color="accent" (click)="submitAnswer(currentQuestionIndex,answerIndex)"> {{answer}} </button>
+            </mat-grid-tile>
+           
+        </mat-grid-list>
+    </div>
+    
