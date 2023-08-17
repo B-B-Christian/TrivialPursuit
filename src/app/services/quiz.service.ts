@@ -45,8 +45,10 @@ export class QuizService
     let url = `https://opentdb.com/api.php?amount=${numOfQuestions}&category=${this.selectedCategory.id}&difficulty=${this.difficulty}&type=${this.quizType}`
 
     return this.httpService.get<apiQuestionResponse>(url)
-    .pipe(map((result: apiQuestionResponse) => 
+    .pipe(
+          map((result: apiQuestionResponse) => 
           {
+            console.log(result)
             return result.results.map<PlayerQuestion>( (x, index) => 
               {
                 // Converts the raw data into a quiz question with answers presented in a random order
